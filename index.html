@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<!-- base HTML layout taken from Chris Whong's example page
+https://github.com/chriswhong/responsive-web-map-layout/tree/main -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Staten Island Railway Stations</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- added a favicon of the Staten Island Railway logo to the tab -->
+    <link rel="icon" href="favicon.ico?">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-container">
+        <nav>
+            <!-- title bar at top -->
+            <div class="title">An Idea for a new Right of Way on the Staten Island Railway</div>
+            <!-- link to the source code in the top right -->
+            <div class="nav-links">
+                <a class="nav-link" href="https://github.com/mfraj99/Advanced-GIS-Assignment3" target="_blank"
+                    rel="noopener noreferrer">Source Code</a>
+            </div>
+
+        </nav>
+
+        <!-- large sidebar for text description and buttons -->
+        <div id="content-container">
+            <div id="sidebar">
+                <h3 id="header">Staten Island Railway has a lot of potential.</h3>
+                <p id="p1">The Staten Island Railway is 21 stops from Tottenville in the South to the St. George Ferry Terminal
+                    in the North. It is a very quirky system with only two stations, St. George and Tompkinsville having
+                    fare control. While the SIR is underused now, with further study and planning its role could be
+                    augmented.</p>
+                <p id="p2">Click on the SIR bullets <img
+                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NYCS-bull-trans-SIR-Std.svg/1024px-NYCS-bull-trans-SIR-Std.svg.png'
+                        width='20px' length='20px'> to view the station names. The <span style='color: blue'>blue</span> line is the current SIR right of way.</p>
+                <p id="p3">Click the 'Continue' button below to view more.</p>
+
+                <!-- buttons for advancing the story and restarting once done, reset is diabled at start -->
+                <button id="reset" onclick="resetMap()" disabled="disabled">Back to the Start</button>
+                <button id="main-toggle" onclick="toggleLayer()">Continue -></button>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- mapbox import -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.js"></script>
+    <!-- jquery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- json and geojson imports -->
+    <script src="js/sir-stations.js"></script>
+    <script src="js/sir-route.js"></script>
+    <script src="js/inverted-staten-outline.js"></script>
+    <script src="js/si-demographics.js"></script>
+    <script src="js/brt.js"></script>
+    <script src="js/proposed-route.js"></script>
+    <script src="js/inverted-expanded-outline.js"></script>
+    <!-- main script file import -->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

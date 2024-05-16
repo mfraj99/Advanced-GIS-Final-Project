@@ -1,0 +1,99 @@
+/* base styling taken from Chris Whong's example page 
+https://github.com/chriswhong/responsive-web-map-layout/tree/main */
+
+html,
+head,
+body,
+#main-container {
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav {
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+    display: flex;
+}
+
+.nav-links {
+    flex-grow: 1;
+    justify-content: end;
+    display: flex;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: .9rem;
+}
+
+#content-container {
+    flex-grow: 1;
+    display: flex;
+    min-height: 0;
+}
+
+#sidebar {
+    width: 348px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#map {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.mapboxgl-marker {
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    color: "#4287f5";
+}
+
+.title {
+    font-weight: 600;
+    font-size: larger;
+}
+
+/* colors for various html tags */
+.density-text {
+    color: "#7a1013";
+}
+
+.sir-line {
+    color: "blue";
+}
+
+/* reset button is greyed out at start as it is initialized as diabled */
+#reset {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 800px) {
+    #content-container {
+        flex-direction: column-reverse;
+    }
+
+    #map {
+        height: 60%;
+        flex-shrink: 0;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+}
