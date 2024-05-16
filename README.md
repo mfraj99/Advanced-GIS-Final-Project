@@ -4,4 +4,6 @@ Created a simple clickable map of the stations of the Staten Island Railway leve
 ## Assignment 4 - Adding new features
 Added more information to the map in the form of a population density chloropleth. A hazy border was added around the map to focus user attention. Experimentation with some of the bells-and-whistles, namely using images in place of the default MapBox markers and adding a favicon.
 ## Final Project - Adding interactivity and telling a story
-Added buttons to click through and display new test and map features to tell the story of proposing a new Staten Island Railway spur in the South of the Island to New Jersey over Outerbridge. These interactions include map clicking, state changes, and small animations.
+Added buttons to click through and display new test and map features to tell the story of proposing a new Staten Island Railway spur in the South of the Island to New Jersey over Outerbridge. These interactions include map clicking, state changes, and small animations.\
+\
+This final project was based on an idea I researched for a proposal at work and I may continue to build this out to help push for it.
